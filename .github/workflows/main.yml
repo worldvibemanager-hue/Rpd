@@ -111,25 +111,3 @@ jobs:
               Write-Host "[$(Get-Date)] RDP Active - Use Ctrl+C in workflow to terminate"
               Start-Sleep -Seconds 300
           }
-
-rdp.txt
-Viber World (worldvibemanager@gmail.com)
-General Info
-Type
-Text
-Size
-5 KB
-Modified
-09:21 20 Sept
-Created
-09:21 20 Sept
-Opened by me
-18:58 2 Dec
-Sharing
-Anyone with the link
-Can View
-innoxentk11
-Owner
-Description
-No description
-Displaying rdp.txt.
