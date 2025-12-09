@@ -101,9 +101,9 @@ jobs:
       - name: Maintain Connection
         run: |
           Write-Host "`n=== RDP ACCESS ==="
-          Write-Host "Address: $env:TAILSCALE_IP"
+          Write-Host "Address: $env:gh-runner-19869501529.tailbc6ee6.ts.net"
           Write-Host "Username: RDP"
-          Write-Host "Password: $(echo $env:RDP_CREDS)"
+          Write-Host "Password: W'nGk@uF*5d-8M23"
           Write-Host "==================`n"
           
           # Keep runner active indefinitely (or until manually cancelled)
