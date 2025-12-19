@@ -98,16 +98,18 @@ jobs:
           }
           Write-Host "TCP connectivity successful!"
 
-      - name: Maintain Connection
-        run: |
-          Write-Host "`n=== RDP ACCESS ==="
-          Write-Host "Address: 100.99.74.14"
-          Write-Host "Username: RDP"
-          Write-Host "Password: W'nGk@uF*5d-8M23"
-          Write-Host "gh-runner-19869501529.tailbc6ee6.ts.net"
-          
-          # Keep runner active indefinitely (or until manually cancelled)
-          while ($true) {
-              Write-Host "[$(Get-Date)] RDP Active - Use Ctrl+C in workflow to terminate"
-              Start-Sleep -Seconds 300
-          }
+          - name: Maintain Connection
+      run: |
+        Write-Host "`n=== RDP ACCESS ==="
+        Write-Host "Address: $env:TAILSCALE_IP"
+        Write-Host "Hostname: $env:TAILSCALE_HOSTNAME"
+        Write-Host "Username: RDP"
+        # This prints the password from the secure env variable set earlier; safe for temporary debug
+        Write-Host "Password: $env:RDP_PASSWORD"
+        Write-Host "==================`n"
+
+        # Keep runner active indefinitely (or until manually cancelled)
+        while ($true) {
+            Write-Host "[$(Get-Date)] RDP Active - Use Ctrl+C in workflow to terminate"
+            Start-Sleep -Seconds 300
+        }
